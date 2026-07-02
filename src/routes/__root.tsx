@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país.",
       },
-      { property: "og:title", content: "TU MARCA · Moda femenina con estilo" },
+      { property: "og:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
       {
         property: "og:description",
         content:
@@ -91,6 +91,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { name: "description", content: "A modern, elegant React landing page for an Argentine women's fashion brand." },
+      { property: "og:description", content: "A modern, elegant React landing page for an Argentine women's fashion brand." },
+      { name: "twitter:description", content: "A modern, elegant React landing page for an Argentine women's fashion brand." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6f505624-e095-4ecc-83f1-04d1b410fdfb/id-preview-a513e8ba--75c5ec83-3952-474e-8708-9a6963bc6125.lovable.app-1782955175704.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6f505624-e095-4ecc-83f1-04d1b410fdfb/id-preview-a513e8ba--75c5ec83-3952-474e-8708-9a6963bc6125.lovable.app-1782955175704.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
