@@ -8,29 +8,38 @@ import heroVideo2 from "@/assets/hero-2.mp4.asset.json";
 const HERO_VIDEOS = [heroVideo1.url, heroVideo2.url];
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.src = HERO_VIDEOS[index];
+    v.load();
+    v.play().catch(() => {});
+  }, [index]);
+
   return (
     <section
       id="top"
       className="relative flex min-h-screen items-end overflow-hidden bg-ink text-linen"
     >
-      {/*
-        Backdrop: elegant CSS gradient placeholder.
-        REPLACE with client's editorial photo (e.g. <img> or bg-image on this div).
-      */}
-      <div
-        className="absolute inset-0"
+      <video
+        ref={videoRef}
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        onEnded={() => setIndex((i) => (i + 1) % HERO_VIDEOS.length)}
         aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 70% 20%, #3a2a1e 0%, #1f1610 40%, #0d0906 100%)",
-        }}
       />
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-60"
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.75) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 100%)",
         }}
       />
       {/* Decorative sparkle */}
