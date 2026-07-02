@@ -1,6 +1,11 @@
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { BRAND, whatsappUrl } from "@/lib/brand";
 import { Reveal } from "./Reveal";
+import heroVideo1 from "@/assets/hero-1.mp4.asset.json";
+import heroVideo2 from "@/assets/hero-2.mp4.asset.json";
+
+const HERO_VIDEOS = [heroVideo1.url, heroVideo2.url];
 
 export function Hero() {
   return (
