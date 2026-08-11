@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { title: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       {
         name: "description",
         content:
           "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país.",
       },
-      { property: "og:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { property: "og:title", content: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       {
         property: "og:description",
         content:
@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { name: "twitter:title", content: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       { name: "description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },
       { property: "og:description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },
       { name: "twitter:description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },
@@ -101,11 +101,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://db.onlinewebfonts.com/c/08e020de1811ec4489f82d1247a42c09?family=Helvetica+Now+Text",
       },
     ],
   }),
