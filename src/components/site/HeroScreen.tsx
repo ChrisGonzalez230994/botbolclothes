@@ -62,7 +62,7 @@ export function HeroScreen() {
             <img
               src={logoAsset}
               alt="Botbol Clothes"
-              className="h-8 w-auto sm:h-16"
+              className="h-10 w-auto sm:h-14"
             />
           </a>
 
