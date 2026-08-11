@@ -187,7 +187,7 @@ export function HeroScreen() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 z-10 flex w-full items-center justify-between px-5 py-4 text-xs text-white/60 sm:px-6 md:px-12 lg:px-16">
+      <footer className="absolute bottom-10 z-10 flex w-full items-center justify-between px-5 py-4 text-xs text-white/60 sm:bottom-0 sm:px-6 md:px-12 lg:px-16">
         <span>Mar del Plata, Argentina</span>
         <a
           href={INSTAGRAM_URL}
