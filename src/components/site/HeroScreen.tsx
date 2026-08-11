@@ -5,17 +5,11 @@ import video1 from "@/assets/hero-a.mp4.asset.json";
 import video2 from "@/assets/hero-b.mp4.asset.json";
 
 const CATALOG_URL = "https://botbolclothes.empretienda.com.ar/";
-const WHATSAPP_URL = "https://wa.me/549XXXXXXXXXX";
-const INSTAGRAM_URL = "https://instagram.com/botbolclothes";
+const WHATSAPP_URL = "https://wa.me/5492235013883";
+const INSTAGRAM_URL = CATALOG_URL;
 
-const NAV: { label: string; items?: string[] }[] = [
-  {
-    label: "Colecciones",
-    items: ["Remeras & Tops", "Pantalones & Jeans", "Vestidos & Faldas"],
-  },
-  { label: "Novedades" },
-  { label: "Nosotros" },
-  { label: "Contacto" },
+const NAV: { label: string; href: string; items?: string[] }[] = [
+  { label: "Contacto", href: WHATSAPP_URL },
 ];
 
 export function HeroScreen() {
