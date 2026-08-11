@@ -69,41 +69,15 @@ export function HeroScreen() {
 
           <nav className="hidden items-center gap-7 md:flex">
             {NAV.map((n) => (
-              <div
+              <a
                 key={n.label}
-                className="relative"
-                onMouseEnter={() => setOpenDropdown(n.items ? n.label : null)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                href={n.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-white/90 transition-colors hover:text-white"
               >
-                <button
-                  type="button"
-                  className="flex items-center gap-1 text-sm font-medium text-white/90 transition-colors hover:text-white"
-                >
-                  {n.label}
-                  {n.items && (
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                        openDropdown === n.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                </button>
-                {n.items && openDropdown === n.label && (
-                  <div className="liquid-glass animate-dropdown !absolute left-0 top-full min-w-[180px] rounded-xl px-2 py-3 shadow-xl">
-                    {n.items.map((item) => (
-                      <a
-                        key={item}
-                        href={CATALOG_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block rounded-lg px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
-                      >
-                        {item}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+                {n.label}
+              </a>
             ))}
           </nav>
 
