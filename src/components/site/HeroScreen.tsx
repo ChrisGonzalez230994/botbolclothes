@@ -1,26 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logoAsset from "@/assets/botbol-logo.png.asset.json";
 import video1 from "@/assets/hero-a.mp4.asset.json";
 import video2 from "@/assets/hero-b.mp4.asset.json";
 
 const CATALOG_URL = "https://botbolclothes.empretienda.com.ar/";
-const WHATSAPP_URL = "https://wa.me/549XXXXXXXXXX";
-const INSTAGRAM_URL = "https://instagram.com/botbolclothes";
+const WHATSAPP_URL = "https://wa.me/5492235013883";
+const INSTAGRAM_URL = CATALOG_URL;
 
-const NAV: { label: string; items?: string[] }[] = [
-  {
-    label: "Colecciones",
-    items: ["Remeras & Tops", "Pantalones & Jeans", "Vestidos & Faldas"],
-  },
-  { label: "Novedades" },
-  { label: "Nosotros" },
-  { label: "Contacto" },
+const NAV: { label: string; href: string }[] = [
+  { label: "Contacto", href: WHATSAPP_URL },
 ];
 
 export function HeroScreen() {
   const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const v1 = useRef<HTMLVideoElement>(null);
   const v2 = useRef<HTMLVideoElement>(null);
@@ -75,41 +68,15 @@ export function HeroScreen() {
 
           <nav className="hidden items-center gap-7 md:flex">
             {NAV.map((n) => (
-              <div
+              <a
                 key={n.label}
-                className="relative"
-                onMouseEnter={() => setOpenDropdown(n.items ? n.label : null)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                href={n.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-white/90 transition-colors hover:text-white"
               >
-                <button
-                  type="button"
-                  className="flex items-center gap-1 text-sm font-medium text-white/90 transition-colors hover:text-white"
-                >
-                  {n.label}
-                  {n.items && (
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                        openDropdown === n.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                </button>
-                {n.items && openDropdown === n.label && (
-                  <div className="liquid-glass animate-dropdown !absolute left-0 top-full min-w-[180px] rounded-xl px-2 py-3 shadow-xl">
-                    {n.items.map((item) => (
-                      <a
-                        key={item}
-                        href={CATALOG_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block rounded-lg px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
-                      >
-                        {item}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+                {n.label}
+              </a>
             ))}
           </nav>
 
@@ -148,45 +115,34 @@ export function HeroScreen() {
           }`}
           style={{ transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)" }}
         >
-          <div className="rounded-2xl bg-[#2C221C]/95 p-6 backdrop-blur-xl">
+          <div className="liquid-glass rounded-xl px-2 py-3 shadow-xl">
             {NAV.map((n) => (
-              <div key={n.label} className="mb-4">
-                <p className="text-sm font-medium text-white">{n.label}</p>
-                {n.items && (
-                  <div className="mt-2 flex flex-col gap-2 pl-4">
-                    {n.items.map((item) => (
-                      <a
-                        key={item}
-                        href={CATALOG_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-white/70"
-                      >
-                        {item}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <a
+                key={n.label}
+                href={n.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-lg px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+              >
+                {n.label}
+              </a>
             ))}
-            <div className="mt-6 flex flex-col gap-3">
-              <a
-                href={CATALOG_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-white px-5 py-2.5 text-center text-sm font-semibold text-gray-900"
-              >
-                Ver catálogo
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="liquid-glass rounded-full px-5 py-2.5 text-center text-sm font-semibold text-white"
-              >
-                Escribinos por WhatsApp
-              </a>
-            </div>
+            <a
+              href={CATALOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+            >
+              Ver catálogo
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg px-3 py-2 text-sm text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+            >
+              Escribinos por WhatsApp
+            </a>
           </div>
         </div>
       </header>
@@ -230,7 +186,7 @@ export function HeroScreen() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 z-10 flex w-full items-center justify-between px-5 py-4 text-xs text-white/60 sm:px-6 md:px-12 lg:px-16">
+      <footer className="absolute bottom-10 z-10 flex w-full items-center justify-between px-5 py-4 text-xs text-white/60 sm:bottom-0 sm:px-6 md:px-12 lg:px-16">
         <span>Mar del Plata, Argentina</span>
         <a
           href={INSTAGRAM_URL}
