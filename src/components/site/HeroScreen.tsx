@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/botbol-logo.png.asset.json";
-import video1 from "@/assets/hero-a.mp4.asset.json";
-import video2 from "@/assets/hero-b.mp4.asset.json";
+import logoAsset from "@/assets/botbol-logo.png";
+import video1 from "@/assets/hero-a.mp4";
+import video2 from "@/assets/hero-b.mp4";
 
 const CATALOG_URL = "https://botbolclothes.empretienda.com.ar/";
 const WHATSAPP_URL = "https://wa.me/5492235013883";
@@ -30,7 +30,7 @@ export function HeroScreen() {
     <section className="relative flex h-screen w-full flex-col overflow-hidden">
       <video
         ref={v1}
-        src={video1.url}
+        src={video1}
         autoPlay
         muted
         playsInline
@@ -43,7 +43,7 @@ export function HeroScreen() {
       />
       <video
         ref={v2}
-        src={video2.url}
+        src={video2}
         muted
         playsInline
         preload="auto"
@@ -60,7 +60,7 @@ export function HeroScreen() {
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="Botbol Clothes"
               className="h-8 w-auto sm:h-10"
             />
