@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logoAsset from "@/assets/botbol-logo.png.asset.json";
 import video1 from "@/assets/hero-a.mp4.asset.json";
 import video2 from "@/assets/hero-b.mp4.asset.json";
