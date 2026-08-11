@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { title: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       {
         name: "description",
         content:
           "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país.",
       },
-      { property: "og:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { property: "og:title", content: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       {
         property: "og:description",
         content:
@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TU MARCA · Moda femenina con estilo — Mar del Plata" },
+      { name: "twitter:title", content: "Botbol Clothes · Moda femenina argentina — Mar del Plata" },
       { name: "description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },
       { property: "og:description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },
       { name: "twitter:description", content: "Marca argentina de moda femenina. Prendas pensadas para la mujer real: calidad, estilo y cercanía. Comprá online con envíos a todo el país." },

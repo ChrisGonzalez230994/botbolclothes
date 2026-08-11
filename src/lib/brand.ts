@@ -1,14 +1,14 @@
 // Centralized brand configuration.
 // Swap these values to rebrand the entire site without touching layout code.
 export const BRAND = {
-  name: "TU MARCA",
+  name: "Botbol Clothes",
   tagline: "Moda femenina con estilo",
   primaryColor: "#1A1A1A", // dark/elegant — swap to client's brand color
   accentColor: "#C9A86C", // warm gold — elegant for fashion
   lightBg: "#FAF8F5", // off-white warm
-  catalogUrl: "https://LINK-TIENDANUBE-AQUI.mitiendanube.com",
+  catalogUrl: "https://botbolclothes.empretienda.com.ar/",
   whatsappNumber: "549XXXXXXXXXX",
-  instagram: "@TU_MARCA",
+  instagram: "@botbolclothes",
   location: "Mar del Plata, Argentina",
 } as const;
 
