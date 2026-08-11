@@ -8,13 +8,12 @@ const CATALOG_URL = "https://botbolclothes.empretienda.com.ar/";
 const WHATSAPP_URL = "https://wa.me/5492235013883";
 const INSTAGRAM_URL = CATALOG_URL;
 
-const NAV: { label: string; href: string; items?: string[] }[] = [
+const NAV: { label: string; href: string }[] = [
   { label: "Contacto", href: WHATSAPP_URL },
 ];
 
 export function HeroScreen() {
   const [activeVideo, setActiveVideo] = useState<1 | 2>(1);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const v1 = useRef<HTMLVideoElement>(null);
   const v2 = useRef<HTMLVideoElement>(null);
